@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Product Catalogue</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header"><div class="container nav">
+<a class="brand" href="#" onclick="showHome()"><div class="logo"><img id="logoImg" class="logo-img hidden" alt="Logo"><span id="logoMark">P</span></div><span id="brandName">Product Hub</span></a>
+<nav><a href="#" onclick="showHome()">Home</a><a href="#products" onclick="showHome()">Products</a><a href="#about" onclick="showHome()">About</a><a href="#contact" onclick="showHome()">Contact</a><button class="admin-btn" onclick="openAdmin()">Admin</button></nav>
+</div></header>
+<main id="publicView">
+<section class="hero"><div class="container hero-grid"><div><span class="eyebrow" id="heroEyebrow">PRODUCT CATALOGUE</span><h1 id="heroTitle">Quality products. Built for your business.</h1><p id="heroText">Explore our latest products, specifications and solutions.</p><a class="primary-btn" href="#products">Explore Products</a></div><div class="hero-card"><div class="hero-icon">▦</div><span>PRODUCT SHOWCASE</span></div></div></section>
+<section class="section" id="products"><div class="container"><div class="section-head"><div><span class="eyebrow">CATALOGUE</span><h2>Our Products</h2></div><input id="search" class="search" placeholder="Search products..." oninput="renderProducts()"></div><div id="categories" class="chips"></div><div id="productGrid" class="product-grid"></div></div></section>
+<section class="section muted" id="about"><div class="container narrow"><span class="eyebrow">ABOUT US</span><h2 id="aboutTitle">About our company</h2><p id="aboutText"></p></div></section>
+<section class="section" id="contact"><div class="container contact-card"><div><span class="eyebrow">GET IN TOUCH</span><h2 id="contactTitle">Contact us</h2><p id="contactText"></p></div><div class="contact-list"><div>📞 <span id="phone"></span></div><div>✉️ <span id="email"></span></div><div>💬 <a id="whatsapp" href="#" target="_blank">WhatsApp</a></div></div></div></section>
+</main>
+<section id="adminView" class="admin-view hidden"><div class="admin-shell"><aside class="sidebar"><h3>Admin Panel</h3><button class="side active" onclick="adminTab('dashboard',this)">Dashboard</button><button class="side" onclick="adminTab('products',this)">Products</button><button class="side" onclick="adminTab('homepage',this)">Homepage</button><button class="side" onclick="adminTab('about',this)">About & Contact</button><button class="side" onclick="adminTab('appearance',this)">Appearance</button><button class="side" onclick="showHome()">View Website</button></aside><div class="admin-content"><div class="admin-top"><h1 id="adminHeading">Dashboard</h1><button onclick="showHome()">← Website</button></div><div id="adminContent"></div></div></div></section>
+<div id="productModal" class="modal hidden"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalGallery" class="modal-gallery"></div><span id="modalCat" class="eyebrow"></span><h2 id="modalName"></h2><div id="modalPrice"></div><p id="modalDesc"></p><div id="modalSpecs" class="specs"></div><a id="modalWhatsApp" class="primary-btn" target="_blank">Enquire on WhatsApp</a></div></div>
+<script src="app.js"></script></body></html>
